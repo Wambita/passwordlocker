@@ -1,3 +1,8 @@
 import unittest
 from user from user
-import credentials from credentials
+class TestUser(unittest.TestCase):
+    """
+    Test class that defines test cases for the user class behaviours,
+    the arguments help in creating test cases.
+    
+    """
