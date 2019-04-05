@@ -1,9 +1,8 @@
 class User:
     """
-
     Class that will generate new instances of users
-
     """
+
     user_detail = []
 
     def save_detail(self):
@@ -12,7 +11,7 @@ class User:
         the method saves detail objects into the empty user_detail array
         """
         User.user_detail.append(self)
-        
+
     def delete_detail():
 
         """
@@ -21,20 +20,10 @@ class User:
 
         User.user_detail.remove(self)
 
-    def __init__(self,first_name,last_name,username,password,confirm_password):
-
-        """
-        the __init__method helps us define properties for our objectsself.
-
-        """    
-
-    
-    
     def __init__(self,account_name,username,password,confirm_password):
 
         """
         the __init__method helps us define properties for our objectsself.
-
         """
 
         self.account_name = account_name
@@ -45,10 +34,23 @@ class User:
 
         """
         arguments for our __init__method will include the following.
-
         """
 
-        @classmethod
+    @classmethod
     def display_all_details(cls):
 
         return cls.user_detail
+
+    @classmethod
+    def find_by_username(cls,username):
+
+        for user in cls.user_detail:
+            if user.username == username:
+                return user
+
+    @classmethod
+    def user_exist(cls,username):
+
+        for user in cls.user_detail:
+            if user.username == username:
+                    return True

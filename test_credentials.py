@@ -1,5 +1,4 @@
 import unittest
-from  import Credential
 from credentials import Credential
 class TestCredential(unittest.TestCase):
 
@@ -14,7 +13,7 @@ class TestCredential(unittest.TestCase):
         this method runs before each test case, carries the instrctions of what is to be done
         """
 
-        self.new_password = Credential("7481fana")
+        self.new_password = Credential("watinguyaz")
 
     def test_init(self):
 
@@ -22,7 +21,9 @@ class TestCredential(unittest.TestCase):
         used to test if the objects have been initialized properly
         """
 
-        self.assertEqual(self.new_password.credential_detail,"7481fana")
+        self.assertEqual(self.new_password.credential_detail,"watinguyaz")
+
+
 
 if __name__ == '__main__':
     unittest.main()
