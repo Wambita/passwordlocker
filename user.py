@@ -12,6 +12,20 @@ class User:
         the method saves detail objects into the empty user_detail array
         """
         User.user_detail.append(self)
+    def delete_detail():
+
+        """
+        the delete_detail method is used to remove objects from the user detail array
+        """
+
+        User.user_detail.remove(self)
+
+    def __init__(self,account_name,username,password,confirm_password):
+
+        """
+        the __init__method helps us define properties for our objectsself.
+
+        """    
 
     
     
