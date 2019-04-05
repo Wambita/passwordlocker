@@ -12,6 +12,7 @@ class User:
         the method saves detail objects into the empty user_detail array
         """
         User.user_detail.append(self)
+        
     def delete_detail():
 
         """
