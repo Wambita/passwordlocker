@@ -13,7 +13,7 @@ class TestUser(unittest.TestCase):
        this method runs before each test case, carries the instrctions of what is to be done
     """
 
-        self.new_user = User("twitter","Wambita")
+        self.new_user = User("Charity","Wambita","Cwambita","cw123", "123cw")
 
      def tearDown(self):
 
@@ -26,8 +26,12 @@ class TestUser(unittest.TestCase):
         used to test if the objects have been initialized properly
         """
 
-        self.assertEqual(self.new_user.login_account,"twitter")
-        self.assertEqual(self.new_user.login_username,"Wambita")
+         self.assertEqual(self.new_user.first_name,"Charity")
+        self.assertEqual(self.new_user.last_name,"Wambita")
+        self.assertEqual(self.new_user.phone_number,"Cwambita")
+        self.assertEqual(self.new_user.email,"cw123")
+        self.assertEqual(self.new_user.email,"123cw")
+
 
     def test_save_detail(self):
 
@@ -46,7 +50,7 @@ class TestUser(unittest.TestCase):
         """
 
         self.new_user.save_detail()
-        test_user = user("Test","user")
+        test_user = user("Test","user","0712345678","test@user.com")
         test_user.save_detail()
         self.assertEqual(len(User.user_detail),3)
 
