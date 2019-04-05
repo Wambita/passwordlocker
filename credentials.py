@@ -12,7 +12,7 @@ Credential_detail= []
         the __init__method helps us define properties for our  various objects.
         """
 
-        self.credential_detail = login_credential
+        self.credential_detail = credential_detail
 
         """
         arguments for our __init__method will include the following.

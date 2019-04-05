@@ -14,7 +14,7 @@ class TestCredential(unittest.TestCase):
         this method runs before each test case, carries the instrctions of what is to be done
         """
 
-        self.new_credential = Credential("watinguyaz")
+        self.new_password = Credential("7481fana")
 
     def test_init(self):
 
@@ -22,7 +22,7 @@ class TestCredential(unittest.TestCase):
         used to test if the objects have been initialized properly
         """
 
-        self.assertEqual(self.new_user.credential,"watinguyaz")
+        self.assertEqual(self.new_password.credential_detail,"7481fana")
 
 if __name__ == '__main__':
     unittest.main()
