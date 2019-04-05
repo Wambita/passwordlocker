@@ -15,6 +15,12 @@ class TestUser(unittest.TestCase):
 
         self.new_user = User("twitter","Wambita")
 
+     def tearDown(self):
+
+            """
+            tearDown method does clean up after each test case has runself.
+            """
+    
     def test_init(self):
         """
         used to test if the objects have been initialized properly
@@ -40,11 +46,21 @@ class TestUser(unittest.TestCase):
         """
 
         self.new_user.save_detail()
-        test_user = Contact("Test","user")
+        test_user = user("Test","user")
         test_user.save_detail()
-        self.assertEqual(len(User.user_detail),2)
+        self.assertEqual(len(User.user_detail),3)
 
 
 
 if __name__ == '__main__':
     unittest.main()
+
+    def test_display_all_details(self):
+
+        """
+        is a method that returns a list of all details saved
+        """
+
+        self.assertEqual(User.display_all_details(),User.user_detail)
+
+

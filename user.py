@@ -47,3 +47,8 @@ class User:
         arguments for our __init__method will include the following.
 
         """
+
+        @classmethod
+    def display_all_details(cls):
+
+        return cls.user_detail
